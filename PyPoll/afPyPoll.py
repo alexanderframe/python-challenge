@@ -1,17 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[21]:
-
 
 import os
 import csv
 
 pyPollPath = os.path.join('Resources', 'election_data.csv')
 outputPath = os.path.join('afPyPollOutput.txt')
-
-
-# In[22]:
 
 
 totalVotes = 0
@@ -23,9 +18,6 @@ candidateVotes = {}
 # variables for winning candidate and winning vote count
 winner = ''
 winningCount = 0
-
-
-# In[23]:
 
 
 with open(pyPollPath, 'r') as pollData:
@@ -44,9 +36,6 @@ with open(pyPollPath, 'r') as pollData:
          
         # add one vote to individual candidate vote tally
         candidateVotes[candidateName] += 1
-
-
-# In[24]:
 
 
 # print the results and export the data
@@ -84,12 +73,3 @@ with open(outputPath, 'w') as txtFile:
     
     print(winningResults)
     txtFile.write(winningResults)
-        
-    
-
-
-# In[ ]:
-
-
-
-
